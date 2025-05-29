@@ -1,4 +1,4 @@
-const mysql = require('mysql2');
+import mysql from 'mysql2';
 require('dotenv').config();
 
 const dbConfig = {
@@ -22,4 +22,4 @@ pool.getConnection((err, connection) => {
 console.log("ENV VARS:", process.env.DB_HOST, process.env.DB_USER, process.env.DB_NAME);
 
 
-module.exports = pool; 
+export default pool; 
